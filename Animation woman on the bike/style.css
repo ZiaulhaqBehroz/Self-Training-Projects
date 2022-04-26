@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  padding-top: 15px;
+  /* background-color: aqua; */
+}
+
+#right-wheel,
+#left-wheel {
+  animation: wheel 2s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+#woman-bike {
+  animation: bike 1s ease-in-out infinite alternate;
+  transform-origin: bottom;
+}
+
+@keyframes wheel {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes bike {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(20deg);
+  }
+}
