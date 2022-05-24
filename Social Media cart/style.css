@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font: size 62.5%;
+    background: #9900ff;
+    background: linear-gradient(90deg, #1a0081e5 0%,#0800ffb9 70%, #aba1ff59 100%) ;
+}
+
+#square3d {
+    width: 100px;
+    height: 100px;
+    background-color: #ff07da;
+    animation: changeDimention 10s infinite;
+    position: absolute;
+    left: 60px;
+    margin: 7rem;
+    border-radius: 10%;
+    box-shadow: -0.4em 0.4em 0 #e1e1e17b,-0.6em 0.6em 0 #00ff15,-0.6em 0.6em 0 #00ff15;
+}
+#square3d1 {
+    width: 100px;
+    height: 100px;
+    background-color: #ff07da;
+    animation: changeDimention1 10s infinite;
+    position: absolute;
+    left: 60rem;
+    top: 20rem;
+    margin: 7rem;
+    border-radius: 30% 1% ;
+    opacity: 0.5;
+    box-shadow: -0.4em 0.4em 0 #e1e1e17b,-0.6em 0.6em 0 #00ff15,-0.6em 0.6em 0 #00ff15;
+}
+@keyframes changeDimention {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(25deg) skew(10deg, 25deg);
+      box-shadow: -2em 2em 0 #00ff2a7e,5em 5em 10em #ff579774,-6em 6em 0 #ff579774;
+      left: 90px;
+    }
+    100% {
+      transform: rotateY(190deg) skew(10deg, 25deg);
+      box-shadow: -2em 2em 0 #00aaff6e,-4em 4em 0 #ff00007a,-6em 6em 0 #ff579774;
+      right: 120px;
+    }
+}
+@keyframes changeDimention1 {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(25deg) skew(10deg, 25deg);
+      box-shadow: -2em 4em 0 #00ff2a,-4em 6em 0 #ff006274,-6em 8em 0 #00eaff74;
+      left: 90px;
+    }
+    100% {
+      transform: rotateX(190deg) skewY(10deg, 25deg);
+      box-shadow: -4em 4em 0 #00aaff6e,6em -8em 9em #ff00007a,-8em 8em 0 #ff579774;
+      right: 120px;
+    }
+}
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: #090b42c0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 35rem;
+}
+
+.card-bio{
+    background: #9900ff;
+    background: linear-gradient(90deg, #9900ff99 0%,#ff000098 50%, #ff95009a 100%);
+    padding: 3rem 3rem 8rem 3rem;
+    display: flex;
+    border-radius: 0.5rem 0.5rem 0 0;
+    position: relative;
+    height: 5rem;
+    z-index: 100;
+}
+
+.img-wrapper{
+    width: 10rem;
+    height: 10rem;
+    margin-right: 3rem;
+}
+.img-wrapper img{
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+img:hover{
+    transform: skew(-30deg, 30deg);
+    transition-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.person-info{
+    width: 50%;
+    font-family: "Dosis", serif;
+    color: #fff;
+    text-shadow:0 0.1rem 0.2rem #0000004d;
+}
+.person-info h3{
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
+}
+.person-info p{
+    font-size: 1.5rem;
+}
+
+.card-btn{
+    position: absolute;
+    bottom: -2.5rem;
+    right: 9.5rem;
+    width: 15rem;
+    height: 4rem;
+    background: #0056ff;
+    background: linear-gradient(90deg, #0056ff 0%, #ff00c2 100%);
+    color: #fff;
+    border-radius: 5rem;
+    border: none;
+    font-family: "Dosis",serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 0.3rem 0.8rem #0000004d;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.change .card-btn{
+    width: 4rem;
+    right: 5rem;
+    bottom: -3rem;
+    border-radius: 50%;
+}
+.card-btn-contact{
+    transition: all 0.5s 0.1s;
+}
+
+.card-btn-contact,
+.card-btn i{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.change .card-btn-contact{
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.1s;
+}
+.card-btn i{
+    opacity: 0;
+    visibility: hidden;
+}
+.change .card-btn i{
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s;
+}
+
+.card-contact{
+    background: linear-gradient(90deg, #9900ff99 0%,#ff95009a 50%) #ff000098 100% ;
+    color: #fff;
+    padding: 1rem 1rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    transform: translateY(-100%);
+    transition: all 0.5s;
+}
+.change .card-contact{
+    transform: translateY(0);
+}
+.card-contact h4{
+    font-family: "Dosis", serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    text-shadow: 0 0.1rem 0.2rem #0000004d;
+    transform: scale(0);
+    transform-origin: left;
+    transition: all 0.5s;
+}
+.change .card-contact h4{
+    transform: scale(1);
+}
+
+.card-social{
+    transition: 0.3s;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.github{
+    background: #8882a5;
+    background: linear-gradient(90deg, #ffffffcc 0%,#817c74b9 70%, #00000059 100%) ;
+    transition: all .5s .3s;
+}
+.linkedin{
+    background: rgb(206, 133, 255);
+    background: linear-gradient(90deg, #ffffffcc 0%, #52cbffb9 70%, #007bb659 100%) ;
+    transition: all .5s .5s;
+}
+.fb{
+    background: #ce85ff;
+    background: linear-gradient(90deg, #ffffffcc 0%, #5350a3b9 70%, #3b599859 100%) ;
+    transition: all .5s .7s;
+}
+
+.change .card-social{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+.icon-wrapper{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+}
+.github .icon-wrapper{
+    background-color: #000000;
+}
+.linkedin .icon-wrapper{
+    background-color: #007bb6;
+}
+.fb .icon-wrapper{
+    background-color: #3b5998
+}
+
+.icon-wrapper i{
+    font-size: 2rem;
+    color: #fff;
+}
+
+.contact-details h4{
+    font-family: "Dosis", serif;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.github h4{
+    color: #000000;
+    font-family: "Dosis";
+}
+.linkedin h4{
+    color: #007bb6;
+    font-family: "Dosis";
+}
+.fb h4{
+    color: #3b5998;
+    font-family: "Dosis";
+}
+
+
+.contact-details p{
+    font-family: "Dosis";
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+}
+
+.contact-detalis p a{
+    list-style-type: none;
+    text-decoration: none;
+    font-family: "Dosis";
+}
+.contact-detalis p a:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}
